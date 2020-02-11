@@ -136,8 +136,6 @@ class _Symbol(Symbol):
                 new_shape += (-4,)
                 sliced = _npi.slice(self, begin, end, step)
                 return _npi.reshape(sliced, new_shape)
-            elif isinstance(key, list):
-                return self
             else:
                 raise IndexError('Only integer, slice, or tuple of these types are supported! '
                                  'Received key={}'.format(key))
