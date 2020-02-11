@@ -137,7 +137,7 @@ class _Symbol(Symbol):
                 sliced = _npi.slice(self, begin, end, step)
                 return _npi.reshape(sliced, new_shape)
             elif isinstance(key, list):
-                return IndexError('It is a list')
+                return self
             else:
                 raise IndexError('Only integer, slice, or tuple of these types are supported! '
                                  'Received key={}'.format(key))
